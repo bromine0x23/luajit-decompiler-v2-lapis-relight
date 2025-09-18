@@ -5,6 +5,10 @@ enum BC_OP {
 	BC_OP_ISGE, // if not (A<VAR> < D<VAR>) then JMP
 	BC_OP_ISLE, // if A<VAR> <= D<VAR> then JMP
 	BC_OP_ISGT, // if not (A<VAR> <= D<VAR>) then JMP
+	BC_OP_MOV, // A<DST> = D<VAR>
+	BC_OP_NOT, // A<DST> = not D<VAR>
+	BC_OP_UNM, // A<DST> = -D<VAR>
+	BC_OP_LEN, // A<DST> = #D<VAR>
 	BC_OP_ISEQV, // if A<VAR> == D<VAR> then JMP
 	BC_OP_ISNEV, // if A<VAR> ~= D<VAR> then JMP
 	BC_OP_ISEQS, // if A<VAR> == D<STR> then JMP
@@ -19,10 +23,6 @@ enum BC_OP {
 	BC_OP_ISF, // if not D<VAR> then JMP
 	BC_OP_ISTYPE, // unsupported
 	BC_OP_ISNUM, // unsupported
-	BC_OP_MOV, // A<DST> = D<VAR>
-	BC_OP_NOT, // A<DST> = not D<VAR>
-	BC_OP_UNM, // A<DST> = -D<VAR>
-	BC_OP_LEN, // A<DST> = #D<VAR>
 	BC_OP_ADDVN, // A<DST> = B<VAR> + C<NUM>
 	BC_OP_SUBVN, // A<DST> = B<VAR> - C<NUM>
 	BC_OP_MULVN, // A<DST> = B<VAR> * C<NUM>

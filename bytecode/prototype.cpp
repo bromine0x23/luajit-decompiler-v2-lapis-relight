@@ -4,8 +4,8 @@ Bytecode::Prototype::Prototype(const Bytecode& bytecode) : bytecode(bytecode) {}
 
 void Bytecode::Prototype::operator()(std::vector<Prototype*>& unlinkedPrototypes) {
 	read_header();
-	read_instructions();
 	read_upvalues();
+	read_instructions();
 	read_constants(unlinkedPrototypes);
 	read_number_constants();
 	read_debug_info();
